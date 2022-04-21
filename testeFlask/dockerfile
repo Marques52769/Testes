@@ -1,0 +1,8 @@
+FROM python:3
+WORKDIR /testeFlask
+COPY requirements.txt /testeFlask
+RUN pip install -r requirements.txt
+COPY . /testeFlask
+EXPOSE 5000
+ENTRYPOINT ["python"]
+CMD ["teste.py"]
